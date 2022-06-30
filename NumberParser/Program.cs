@@ -20,14 +20,20 @@ namespace NumberParser
 
             string file = numberFile.Split(' ')[numberFile.Split(' ').Length - 1];
 
+            Console.Write(SortString(numbers) + " " + file);
+            Console.ReadLine();
+        }
+
+        // Factory Mathod
+        private static string SortString(string numbers)
+        {
             int[] intArray = numbers.Split(',').Select(x => int.Parse(x)).ToArray();
 
             Array.Sort(intArray);
 
             Array.Reverse(intArray);
 
-            Console.Write(string.Join(",", intArray) + " " + file);
-            Console.ReadLine();
+            return string.Join(",", intArray);
         }
     }
 }
