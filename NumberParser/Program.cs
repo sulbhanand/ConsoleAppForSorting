@@ -10,10 +10,6 @@ using System.Xml;
 
 namespace NumberParser
 {
-    public class JSONOBJECT
-    {
-        public int[] SortArray { get; set; }
-    }
     public interface IFactory
     {
         string SortStringInDescending(string numbers);
